@@ -15,9 +15,9 @@ class vm:
         self._pl=0
         self._pk=0
     def _c(self,_e,_q,_s=None):
-         if _e=="_l":
+        if _e=="_l":
             _n=self._pl
-         if _e=="_k":
+        if _e=="_k":
             _n=self._pk
         for _x in range(0,len(_q)):
             if _q[_x]==".":
