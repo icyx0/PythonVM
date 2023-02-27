@@ -40,6 +40,20 @@ class vm:
                 _n+=1
             if _q[_x]=="<":
                 _n-=1
+            if _q[_x]=="+":
+                if _e=="_l":
+                    self._pl=_n
+                    self._l.append(_s)
+                if _e=="_k":
+                    self._pk=_n
+                    self._k.append(_s)
+            if _q[_x]=="-":
+                if _e=="_l":
+                    self._pl=_n
+                    self._l.pop(_n)
+                if _e=="_k":
+                    self._pk=_n
+                    self._k.pop(_n)
     def _z(self,_t,_i=None):
         global _o
         if _i:
