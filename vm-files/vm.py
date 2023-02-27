@@ -12,19 +12,28 @@ class vm:
     def __init__(self,c,c2):
         self._l=c
         self._k=c2
+        self._pl=0
+        self._pk=0
     def _c(self,_e,_q,_s=None):
-        _n=0
+         if _e=="_l":
+            _n=self._pl
+         if _e=="_k":
+            _n=self._pk
         for _x in range(0,len(_q)):
             if _q[_x]==".":
                 if _e=="_l":
+                    self._pl=_n
                     return self._l[_n]
                 if _e=="_k":
+                    self._pk=_n
                     return self._k[_n]
                 break
             if _q[_x]==",":
                 if _e=="_l":
+                    self._pl=_n
                     self._l[_n]=_s
                 if _e=="_k":
+                    self._pk=_n
                     self._k[_n]=_s
                 break
             if _q[_x]==">":
